@@ -1,6 +1,6 @@
 --- #YAML:1.0
 name:               Roman-Unicode
-version:            1.02
+version:            1.02_02
 abstract:           Make roman numerals, using the Unicode characters for them
 author:
     - brian d foy <brian.d.foy@gmail.com>

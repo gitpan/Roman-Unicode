@@ -12,7 +12,7 @@ use vars qw( $VERSION @EXPORT_OK );
 use Exporter 'import';
 @EXPORT_OK = qw( is_roman to_perl to_roman to_ascii );
 
-$VERSION = '1.02';
+$VERSION = '1.02_02';
 
 use Unicode::Normalize qw(NFKD);
 
@@ -39,7 +39,7 @@ a bit with that.
 
 =over 4
 
-=item is_roman
+=item is_roman( STRING )
 
 Returns true if the string looks like a valid roman numeral. This
 works with either the ASCII version or the ones using the characters
@@ -207,9 +207,10 @@ sub to_ascii {
 
 	$roman = NFKD( $roman );
 
-	$roman =~ s/ↂ/(C)/g;
-	$roman =~ s/ↈ/((C))/g;
-	$roman =~ s/ↇ/(D)/g;
+	$roman =~ s/ↁ/|))/g;
+	$roman =~ s/ↂ/((|))/g;
+	$roman =~ s/ↈ/(((|)))/g;
+	$roman =~ s/ↇ/|)))/g;
 
 	$roman;
 	}
@@ -234,9 +235,9 @@ sub IsUppercaseRoman {
 2160
 2164
 2169
-216C\t216F
-2181\t2182
-2187\t2188
+216C 216F
+2181 2182
+2187 2188
 CODE_NUMBERS
 	}
 
@@ -245,7 +246,7 @@ sub IsLowercaseRoman {
 2170
 2174
 2179
-217C\t217F
+217C 217F
 CODE_NUMBERS
 	}
 
