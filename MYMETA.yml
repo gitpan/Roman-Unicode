@@ -18,5 +18,6 @@ no_index:
   directory:
     - t
     - inc
-requires: {}
-version: 1.02_02
+requires:
+  Unicode::Casing: 0
+version: 1.02_03
