@@ -1,22 +1,22 @@
---- #YAML:1.0
-name:               Roman-Unicode
-version:            1.02_03
-abstract:           Make roman numerals, using the Unicode characters for them
+---
+abstract: 'Make roman numerals, using the Unicode characters for them'
 author:
-    - brian d foy <brian.d.foy@gmail.com>
-license:            unknown
-distribution_type:  module
-configure_requires:
-    ExtUtils::MakeMaker:  0
+  - 'brian d foy <brian.d.foy@gmail.com>'
 build_requires:
-    ExtUtils::MakeMaker:  0
-requires:
-    Unicode::Casing:  0
-no_index:
-    directory:
-        - t
-        - inc
-generated_by:       ExtUtils::MakeMaker version 6.57_05
+  ExtUtils::MakeMaker: 0
+configure_requires:
+  ExtUtils::MakeMaker: 0
+dynamic_config: 1
+generated_by: 'ExtUtils::MakeMaker version 6.84, CPAN::Meta::Converter version 2.130880'
+license: unknown
 meta-spec:
-    url:      http://module-build.sourceforge.net/META-spec-v1.4.html
-    version:  1.4
+  url: http://module-build.sourceforge.net/META-spec-v1.4.html
+  version: 1.4
+name: Roman-Unicode
+no_index:
+  directory:
+    - t
+    - inc
+requires:
+  Unicode::Casing: 0
+version: 1.02_04
